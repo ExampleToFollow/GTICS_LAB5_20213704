@@ -1,10 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
-
-</body>
-</html>
+<div th:fragment="menu"  class="container w-75 d-flex justify-content-around">
+    <a th:href="@{'/TecnicosList'}"><button class="btn btn-primary">Tecnicos</button></a>
+    <a style="margin-left:10px" th:href="@{'/EstadisticasList'}"><button class="btn btn-primary">Estadísticas - Equipos</button></a>
+</div>
