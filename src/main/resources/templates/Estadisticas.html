@@ -11,18 +11,18 @@
     <div th:insert="~{menuSuperior.html :: menu}"></div>
 </div>
 <div class="container mt-5">
-    <h1 class="mb-3">Estadísticas - equipos</h1>
+    <h1 class="mb-3">Estadísticas - Intervenciones</h1>
     <table class="table table-sm">
         <tr>
             <th>#</th>
-            <th>Cantidad de equipos </th>
-            <th>País</th>
+            <th>Cantidad de intervenciones </th>
+            <th>Sito</th>
 
         </tr>
         <tr th:each="row, info: ${lista}">
             <td th:text="${info.index + 1}"></td>
             <td th:text="${row.getCantidad()}"></td>
-            <td th:text="${row.getPais()}"></td>
+            <td th:text="${row.getSede()}"></td>
         </tr>
     </table>
 </div>

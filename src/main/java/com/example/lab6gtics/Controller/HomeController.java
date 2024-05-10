@@ -1,6 +1,6 @@
 package com.example.lab6gtics.Controller;
 
-import com.example.lab6gtics.DTO.EquiposPorPais;
+import com.example.lab6gtics.DTO.IntervencionesPorSitio;
 import com.example.lab6gtics.Entity.Technician;
 import jakarta.validation.Valid;
 import org.springframework.stereotype.Controller;
@@ -82,7 +82,7 @@ public class HomeController {
     @GetMapping("/EstadisticasList")
     public String EstadisticasList(Model model) {
         System.out.println("EstadisticasList");
-        List<EquiposPorPais> lista = deviceRepository.getEquiposPorPaisDTO();
+        List<IntervencionesPorSitio> lista = locationRepository.getIntervencionesPorSitio();
         model.addAttribute("lista" , lista);
         return "Estadisticas";
     }
